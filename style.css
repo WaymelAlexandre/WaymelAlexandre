@@ -78,8 +78,8 @@ section{
 /* .contentBanner{
     min-height: auto;
 } */
-.banner .contentBanner,
-.sidebar{
+.banner .contentBanner ,
+.sidebar {
     position: absolute;
     top: 0;
     right: 0;
@@ -170,9 +170,77 @@ p{
     letter-spacing: 2px;
     text-transform:uppercase;
 }
-.sidebar ul li a:hover{
+.sidebar ul li a:hover
+{
     color: #70012b;
+} 
+/* sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
+.menu{
+    position: relative; 
+    display: flex;
+    flex-direction: column;
 }
+ul li{
+    list-style: none;
+}
+ul li::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 6em;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 20px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+ul li:hover:before{
+    opacity: 0.05;
+    letter-spacing: 0px;
+}
+ul li a{
+    position: relative;
+    display: block;
+    padding: 6px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5;
+    z-index: 1;
+}
+ul:hover li a{
+    opacity: 0;
+}
+ul li a:hover{
+    transform: scale(1.5);
+    z-index: 1000;
+    background: #ff00009f;
+    opacity: 1;
+}
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(90deg , transparent, rgb(255,255,255,0.8), transparent);
+    transform: skew(35deg);
+    transition: 0s;
+}
+ul li a:hover:before{
+    left: calc(100% + 100px);
+    transition: 1s;
+    transition-delay: 0.2 ;
+
+}
+
+
 .sci{
     
     position: absolute;
