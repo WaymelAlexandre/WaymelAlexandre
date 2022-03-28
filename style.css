@@ -75,9 +75,6 @@ section{
     height: 100%;
     object-fit: cover;
 }
-/* .contentBanner{
-    min-height: auto;
-} */
 .banner .contentBanner ,
 .sidebar {
     position: absolute;
@@ -86,23 +83,29 @@ section{
     width: calc(100% - 400px);
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    
-    padding: 100px;
+    padding: 50px;
 
 }
 
 .logotext{
     position: absolute;
     top: 40px;
-    left: 100px;
-    font-size: 3em;
+    left: 50px;
+    font-size: 1.9em;
     text-transform:  capitalize;
     letter-spacing: 1px;
-    background: #130007;
-    color: aliceblue;
+    background-image: linear-gradient(to bottom left, #e3dcd2, rgba(209, 27, 3, 0.041));
+    color: #70012b;
     padding: 0 5px;
+    animation: eftext 15s infinite;
+
+}
+@keyframes eftext{
+    50%{
+        color: #290311;
+    }
 }
 
 .banner .contentBanner h4{
@@ -120,15 +123,24 @@ section{
     font-size: 3em;
     color: #951d2a;
     line-height: 1em;
+    animation: eftext 5s infinite;
 }
 p{
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 20px 0;
     font-weight: 300;
 
 }
-
 .btn{
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgb(117, 21, 21);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.5;
+    font-size: 20px;
+
+/* ssssssssssssssssssssssssssssssssssssssssssssssssssss */
+
     background: #ae1b1e ;
     color: aliceblue;
     padding: 10px 30px;
@@ -137,6 +149,39 @@ p{
     font-weight: 500;
     letter-spacing: 2px;
 }
+.btn:hover{
+    color: #130007;
+    font-size: 30px;
+}
+.btn:nth-child(2){
+    filter: hue-rotate(80deg);
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 20px;
+    height: 2px;
+    background: #130007;
+    box-shadow: 5px -8px 0 #130007,
+    5px 8px 0 #130007;
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    right:-20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #130007;
+    box-shadow: -5px -8px 0 #130007,
+                -5px 8px 0 #130007;
+}
+
 .sidebar{
     position: fixed;
     background: #130007;
@@ -172,7 +217,7 @@ p{
 }
 .sidebar ul li a:hover
 {
-    color: #70012b;
+    color: #f57a7aa9;
 } 
 /* sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
 .menu{
@@ -186,20 +231,26 @@ ul li{
 ul li::before{
     content: attr(data-text);
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 6em;
+    color: #f57a7aa9;
+    font-size:10em;
     font-weight: 700;
     pointer-events: none;
     opacity: 0;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
     transition: 0.5s;
     white-space: nowrap;
+
+   
+
+    background: linear-gradient(0deg , transparent, rgba(212, 19, 19, 0.329), transparent);
+    /* transform: skew(65deg); */
+    transition: 0s;
 }
 ul li:hover:before{
-    opacity: 0.05;
+    opacity: 0.15;
     letter-spacing: 0px;
 }
 ul li a{
@@ -219,7 +270,9 @@ ul:hover li a{
 ul li a:hover{
     transform: scale(1.5);
     z-index: 1000;
-    background: #ff00009f;
+    /* background: #900e2fc7; */
+    border-style: double;
+    border-color: #ccc;
     opacity: 1;
 }
 ul li a::before{
@@ -230,12 +283,12 @@ ul li a::before{
     width: 80px;
     height: 80px;
     background: linear-gradient(90deg , transparent, rgb(255,255,255,0.8), transparent);
-    transform: skew(35deg);
+    transform: skew(65deg);
     transition: 0s;
 }
 ul li a:hover:before{
     left: calc(100% + 100px);
-    transition: 1s;
+    transition: 0.7s;
     transition-delay: 0.2 ;
 
 }
@@ -243,9 +296,11 @@ ul li a:hover:before{
 
 .sci{
     
+
+    
     position: absolute;
     /* margin icon */
-    left: 100px;
+    left: 50px;
     bottom: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -355,10 +410,12 @@ ul li a:hover:before{
     margin: 20px;
     transition: 0.5;
     text-align: center;
-    background: f5f5f5f5;
+    background: #e3dcd26e;
     margin: 10px;
     border: 1px solid#ccc;
+    
     box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);
+    
     
 }
 .Experience .content .ExperienceBx:hover{
@@ -462,7 +519,12 @@ ul li a:hover:before{
     margin: 0%;
     font-size: 16px;
 }
-@media(max-width:406px){
+@media(max-width:400px){
+    section {
+    padding: 20px;
+    min-height: 150vh;
+    }
+   
 
     .sci li img{
         display: none;
@@ -527,14 +589,22 @@ ul li a:hover:before{
     .about .content{
         display: flex;
         justify-content: center;
-        margin-top: 40px;
+        flex-direction: column-reverse;
+        margin-top: 30px;
         text-align: center;
     }
     .about .content .textBx{
-        text-align: center;
+        text-align: center; 
+        min-width: 100%;
+        width: 100%;
+    }
+    .about .content .imgBx{
+        margin: auto;
+        min-width: 100%;
+        width: 100%;
     }
     .content .imgBx {
-        display: none;
+        /* display: none; */
     }
     .contact .contactForm{
         width: 100%;
