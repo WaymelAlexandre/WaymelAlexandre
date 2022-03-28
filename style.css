@@ -546,8 +546,10 @@ ul li a:hover:before{
     .banner .imgSideBar{
         display: none;
     }
-
-    .banner .contentBanner, 
+    .banner {
+        min-height: 1000px;
+    }
+    .banner .contentBanner , 
     .sidebar {
         width:100%;
         padding: 20px;  
@@ -558,14 +560,14 @@ ul li a:hover:before{
     
     .sci{
     
-        position: absolute;
+        /* position: absolute; */
         /* margin icon */
         left: 20px;
         bottom: 20px;
-        display: flex;
+        /* display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: center; */
     }
     .sci li img{
         height: 80px;
