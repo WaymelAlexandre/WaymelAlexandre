@@ -603,9 +603,9 @@ ul li a:hover:before{
         min-width: 100%;
         width: 100%;
     }
-    .content .imgBx {
-        /* display: none; */
-    }
+    /* .content .imgBx {
+        display: none; 
+    } */
     .contact .contactForm{
         width: 100%;
     }
