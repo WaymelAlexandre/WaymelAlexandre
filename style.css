@@ -64,7 +64,7 @@ section{
     position: relative;
     width: 100%;
     min-height: auto;
-    min-height: 60vh;
+    min-height: 100vh;
 
 }
 .banner .imgSideBar img{
@@ -524,7 +524,9 @@ ul li a:hover:before{
     padding: 20px;
     min-height: 150vh;
     }
-   
+   .logotext{
+       display: none;
+   }
 
     .sci li img{
         display: none;
