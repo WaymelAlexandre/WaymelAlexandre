@@ -315,6 +315,11 @@ p{
 .title {
     width: 100%;
     text-align: center;
+    /* ssssssssssssssss */
+    /* background-color: #2b2a28; */
+    color: #262b32;
+    background-color: #8b673d10;
+    text-shadow: 1px 1px #8b673d;
 }
 .title h2{
     position: relative;
@@ -337,15 +342,17 @@ p{
     bottom: -10px;
     width: 60px;
     height: 4px;
-    background: #20030e;
+    background: #350a1b;
 }
 .title.white h2
 {
-    color:#951d2a;
+    color:#222831;
+    text-decoration-line: underline;
+    text-shadow: 1px 1px #8b673d;
 }
 .title.white p
 {
-    color:#e3dcd2;
+    color:#88857e;
     font-size: 29px;
 }
 .title.white h2::before{
@@ -420,23 +427,27 @@ p{
     text-align: center;
     background: #ead7d7c8;
     margin: 10px;
-    border: 5px  double  rgb(85, 26, 26);
+    border: 5px  double  #8b673d;
     border-radius: 30px;
     box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);      
 }
+/* ssssssssssssssssssssssssssss */
 .Experience .content .ExperienceBx:hover{
-    background: #180202ea;
+    background-image: linear-gradient(to bottom right, #2b2a28bb, #2b2a28);
+    /* background: #e29f51; */
 }
 .Experience .content .ExperienceBx img{
     max-width: 80px;
     transition: 1.5s;
     
+    
 }
 .Experience .content .ExperienceBx:hover img{
-    filter:invert(1)
+    /* filter:invert(1); */
+    font-size: 60px;
 }
 .Experience .content .ExperienceBx:hover h2{
-    color: #ac243289;
+    color: #e29f51;
 }
 .Experience .content .ExperienceBx h2{
     margin-top: 20px;
@@ -495,9 +506,9 @@ p{
     margin: 20px;
     transition: 0.5;
     text-align: center;
-    background: #030109f1;
+    background-image: linear-gradient(to bottom right, #2b2a28bb, #2b2a28);
     margin: 10px;
-    border: 5px double  rgb(9, 11, 11);
+    border: 5px double  #8b673d;
     border-radius: 30px;
     box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);  
 }
@@ -580,17 +591,19 @@ p{
     padding: 10px;
     border: none;
     outline: none;
-    background-color: #380116;
-    color: aliceblue;
+    background-color: #2b2a28;
+    color: #e29f51;
     font-size: 16px;
     resize: none;
 }
 .contact .contactForm .row textarea{
     height: 100px;
 }
+
 .contact .contactForm .row input[type="submit"]{
-    background: #ae1b1e;
-    color: aliceblue;
+    background: #e29f51;
+    color: #222831;
+    border: solid #222831;
     padding: 10px 30px;
     display: inline-block;
     font-weight: 500;
@@ -600,9 +613,11 @@ p{
 }
 
 .copyright{
-    color: aliceblue;
-    background: #1f030d;
+    color: #2b2a28;
+    background: #e29f51;
     text-align: center;
+    border-right-style: 5px solid #2b2a28;
+    border-style: solid;
     padding: 10px;
 }
 
