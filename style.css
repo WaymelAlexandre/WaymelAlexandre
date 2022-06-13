@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    /* scroll-behavior: roboto; */
 }
 
 /* burger menue style */
@@ -15,32 +14,11 @@
     position: fixed;
     background-repeat: no-repeat;
     z-index: 1000;
-
     top: 30px;
     right: 30px;
     width: 50px;
     height: 50px;
   }
-  
-  /* .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #ae1b1e;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  } */
 .bar{
     width: 50px;
     height: 5px;
@@ -49,7 +27,6 @@
     transition: 0.25s ease-in-out;
     border-radius: 10px;
 }
-
 .bar::before,
 .bar::after{
     content: '';
@@ -59,7 +36,6 @@
     background-color: #ae1b1e;
     transition: 0.5s ease-in-out;
     border-radius: 10px;
-
 }
 .bar::before{
     transform: translateY(-15px);
@@ -67,7 +43,6 @@
 .bar::after{
     transform: translateY(15px);
 }
-
 .open .bar{
     background-color: transparent;
 }
@@ -80,8 +55,7 @@
 
 
 
-section{
-    
+section{   
     padding: 100px;
     min-height: 150vh;
 }
@@ -91,7 +65,6 @@ section{
     width: 100%;
     min-height: auto;
     min-height: 100vh;
-
 }
 .banner .imgSideBar img{
     position: absolute;
@@ -101,8 +74,7 @@ section{
     height: 100%;
     object-fit: cover;
 }
-.banner .contentBanner ,
-.sidebar {
+.banner .contentBanner ,.sidebar {
     position: absolute;
     top: 0;
     right: 0;
@@ -112,8 +84,8 @@ section{
     justify-content: space-evenly;
     align-items: center;
     padding: 50px;
-
 }
+
 
 .logotext{
     position: absolute;
@@ -126,8 +98,8 @@ section{
     color: #70012b;
     padding: 0 5px;
     animation: eftext 5s infinite;
-
 }
+
 @keyframes eftext{
     50%{
         color: #290311;
@@ -154,18 +126,22 @@ section{
     line-height: 1em;
     animation: eftext 5s infinite;
 }
+
+
+
 p{
     font-size: 1.7em;
     margin: 20px 0;
     font-weight: 300;
-
 }
+
+
+
 .btn{
     position: relative;
     display: inline-block; 
     border: 2px solid rgb(117, 21, 21);
-    padding: 15px 30 px;
-    
+    padding: 15px 30px;
     transition: 0.5;
     font-size: 20px;
     background: #ae1b1e ;
@@ -174,6 +150,7 @@ p{
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 2px;
+    /* -webkit-box-reflect: below 0 linear-gradient(roboto, white); */
     -webkit-box-reflect: below 0px linear-gradient(transparent,rgba(170, 25, 25, 0.226));
     transition: 00.5s;
 }
@@ -185,12 +162,11 @@ p{
     filter: hue-rotate(80deg);
 }
 .btn::before{
-    content: "";
+    content: " ";
     position: absolute;
     left: -20px;
     top: 50%;
     transform: translateY(-50%);
-    
     width: 20px;
     height: 2px;
     background: #130007;
@@ -198,7 +174,7 @@ p{
                 5px 8px 0 #130007;
 }
 .btn::after {
-    content: "";
+    content: " ";
     position: absolute;
     right:-20px;
     top: 50%;
@@ -209,6 +185,9 @@ p{
     box-shadow: -5px -8px 0 #130007,
                 -5px 8px 0 #130007;
 }
+
+
+
 
 .sidebar{
     position: fixed;
@@ -253,10 +232,10 @@ p{
     display: flex;
     flex-direction: column;
 }
-ul li{
+.sidebar ul li{
     list-style: none;
 }
-ul li::before{
+.sidebar ul li::before{
     content: attr(data-text);
     position: absolute;
     top: 30%;
@@ -270,30 +249,19 @@ ul li::before{
     letter-spacing: 10px;
     transition: 0.5s;
     white-space: nowrap;
-
-    
     top: 0;
     left: -100px;
     width: 80px;
     height: 80px;
-    /* background: linear-gradient(transparent, rgba(192, 179, 179, 0.8), transparent); */
-   
-    /* transition: 10s; */
-
-
-   
-
-    /* background: linear-gradient(0deg , transparent, rgba(248, 0, 0, 0.095), transparent); */
-    /* transform: skew(65deg); */
     transition: 0s;
 }
-ul li:hover:before{
+.sidebar ul li:hover:before{
     opacity: 0.15;
     letter-spacing: 0px;
     
 
 }
-ul li a{
+.sidebar ul li a{
     position: relative;
     display: block;
     padding: 6px 15px;
@@ -304,46 +272,21 @@ ul li a{
     transition: 0.5;
     z-index: 1;
 }
-ul:hover li a{
+.sidebar ul:hover li a{
     opacity: 0.5;
 }
-ul li a:hover{
+.sidebar ul li a:hover{
     transform: scale(1.5);
     z-index: 1000;
-    /* background: #900e2fc7; */
-    /* border-style: double;
-    border-color: #ccc; */
     opacity: 1;
 }
-/* ul li a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100px;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(90deg , transparent, rgba(255, 0, 0, 0.8), transparent);
-    transform: skew(65deg);
-    transition: 0s;
-}
-/*/
-ul li:hover:before{
+.sidebar ul li:hover:before{
     right: calc(100% + 100px);
     transition: 1s;
     transition-delay: 0.2 ;
-    
-
-     
-
 }
-
-
 .sci{
-    
-
-    
     position: absolute;
-    /* margin icon */
     left: 50px;
     bottom: 20px;
     display: flex;
@@ -351,12 +294,10 @@ ul li:hover:before{
     flex-wrap: wrap;
     align-items: center;
 }
-
 .sci li{
     margin-right: 10px;
     list-style: none;
 }
-
 .sci li img{
     width:90px;
     height:90px;
@@ -366,13 +307,15 @@ ul li:hover:before{
 .sci li img:hover{
     transform: scale(0.8);
     opacity: 0.9;
-
 }
+
+
+
+
 .title {
     width: 100%;
     text-align: center;
 }
-
 .title h2{
     position: relative;
     counter-reset:#70012b ;
@@ -384,7 +327,6 @@ ul li:hover:before{
     max-width: 700px;
     font-size: 2em;
     font-weight: 700;
-
     display: inline-block;
 }
 .title h2::before{
@@ -396,7 +338,6 @@ ul li:hover:before{
     width: 60px;
     height: 4px;
     background: #20030e;
-
 }
 .title.white h2
 {
@@ -410,57 +351,128 @@ ul li:hover:before{
 .title.white h2::before{
     background: #cf3224;
 }
+
+
+
+
+
+
+
+
+
+
 .about{
     /* background: #292929; */
     min-height: fit-content;
     background-image: url('img/test13.jpg');
-    background-position: 100%; 
-    
-    
+    background-position: 100%;  
 }
-
 .about .content{
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
 }
- /* 
- #292929
- #616161
- */
 .about .content .textBx{
    min-width: 49%;
    width: 49%;
 }
-
 .about .content .textBx p{
  color: rgb(255, 255, 255);
 }
-
 .about .content .imgBx{
     margin-left: 40px;
 }
-
 .about .content .imgBx img {
     max-width: 80% ;
     margin-left: 15%;
 }
 
+
+
+
+
+
+
+
+
+
 .Experience {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    row-gap: 40px;
+    row-gap: 50px;
     column-gap: 20px;
     background-image: url('img/test5.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
-    background-size: 100% 100%;
+    background-size: 100% 100%; 
+}
+.Experience .content .ExperienceBx{
+
+    padding: 40px 20px;
+    width: 1500px;
+    height:auto;
+    margin: 20px;
+    transition: 0.5;
+    text-align: center;
+    background: #ead7d7c8;
+    margin: 10px;
+    border: 5px  double  rgb(85, 26, 26);
+    border-radius: 30px;
+    box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);      
+}
+.Experience .content .ExperienceBx:hover{
+    background: #180202ea;
+}
+.Experience .content .ExperienceBx img{
+    max-width: 80px;
+    transition: 1.5s;
     
 }
+.Experience .content .ExperienceBx:hover img{
+    filter:invert(1)
+}
+.Experience .content .ExperienceBx:hover h2{
+    color: #ac243289;
+}
+.Experience .content .ExperienceBx h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.5;
+}
+.Experience .content .ExperienceBx:hover p{
+    color: #fff;  
+}
+
+.Experience .content .ExperienceBx p,li{
+    text-align: start;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.5;
+     
+}
+.Experience .content .ExperienceBx li{
+    margin-left: 5%;
+    list-style-type: square;
+    
+}
+.Experience .content .ExperienceBx:hover li{
+    color: #fff;  
+}
+
+
+
+
+
+
 .project {
     display: flex;
     align-items: center;
@@ -474,36 +486,12 @@ ul li:hover:before{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 100% 100%;
-
-    
-}
-
-#more {display: none;}
-
-.Experience .content .ExperienceBx{
-
-    padding: 40px 20px;
-    width: 400px;
-    height:auto;
-    min-height: 650px;
-    margin: 20px;
-    transition: 0.5;
-    text-align: center;
-    background: #ead7d7c8;
-    margin: 10px;
-    border: 5px  double  rgb(85, 26, 26);
-    border-radius: 30px;
-    
-    box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);      
+    background-size: 100% 100%;  
 }
 .project .content .ExperienceBx{
-
     padding: 40px 20px;
     width: 400px;
-    
     height: 650px;
-
     margin: 20px;
     transition: 0.5;
     text-align: center;
@@ -511,35 +499,10 @@ ul li:hover:before{
     margin: 10px;
     border: 5px double  rgb(9, 11, 11);
     border-radius: 30px;
-    
-    /* box-shadow: -3px -3px 6px 0px rgba(58, 58, 76, 0.736);    */
     box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);  
-}
-.Experience .content .ExperienceBx:hover{
-    background: #180202ea;
 }
 .project .content .ExperienceBx:hover{
     background: #ead7d7ea;
-}
-
-.Experience .content .ExperienceBx img{
-    max-width: 80px;
-    transition: 1.5s;
-}
-.project .content .ExperienceBx img{
-    max-width: 80px;
-    transition: 1.5s;
-}
-.Experience .content .ExperienceBx:hover img{
-    filter:invert(1)
-}
-.Experience .content .ExperienceBx h2{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 600;
-    transition: 0.5;
-    
 }
 .project .content .ExperienceBx:hover img{
     filter:invert(0)
@@ -556,18 +519,10 @@ ul li:hover:before{
     transition: 0.5;
     
 }
-
-.Experience .content .ExperienceBx:hover h2{
-    color: #fff;
-    
- }
-.Experience .content .ExperienceBx p{
-     margin-top: 20px;
-     margin-bottom: 10px;
-     font-size: 20px;
-     font-weight: 400;
-     transition: 0.5;
- }
+.project .content .ExperienceBx img{
+    max-width: 80px;
+    transition: 1.5s;
+}
 .project .content .ExperienceBx:hover h2{
     filter:invert(1)
  }
@@ -579,14 +534,12 @@ ul li:hover:before{
      transition: 0.5;
      color: #eed6d6;
  }
-
- .Experience .content .ExperienceBx:hover p{
-    color: #fff;
- }
-
- .project .content .ExperienceBx:hover p{
+.project .content .ExperienceBx:hover p,li{
     color: rgb(0, 0, 0);
  }
+
+
+
 
 .contact{
     /* background: #130007; */
@@ -599,7 +552,6 @@ ul li:hover:before{
     padding: 10%;
 
 }
-
 .contact .contactForm{
     position: relative;
     width: 700px;
@@ -609,7 +561,6 @@ ul li:hover:before{
     width: 100%;
     display: flex;
 }
-
 .contact .contactForm .row .col50{
     width: 50%;
     margin: 10px;
@@ -657,6 +608,12 @@ ul li:hover:before{
     font-size: 16px;
 }
 @media(max-width:400px){
+    .Experience .content .ExperienceBx{
+
+        width: auto;
+        height:auto;
+   
+    }
     section {
     padding: 20px;
     min-height: 150vh;
@@ -664,7 +621,6 @@ ul li:hover:before{
    .logotext{
        display: none;
    }
-
     .sci li img{
         display: none;
     }
@@ -680,7 +636,28 @@ ul li:hover:before{
         font-weight: 300;
     }
 }
+@media(max-width:1597px){
+
+    .Experience .content .ExperienceBx{
+
+
+        width: 100%;
+        height:auto;
+
+    }
+}
 @media(max-width:991px){
+
+    .Experience .content .ExperienceBx{
+
+
+        width: auto;
+        height:auto;
+
+    }
+
+
+    
 
     .banner .imgSideBar{
         display: none;
@@ -696,44 +673,19 @@ ul li:hover:before{
     .logotext{
         left: 20px;
     }
-    
     .sci{
-    
-        /* position: absolute; */
-        /* margin icon */
         left: 20px;
         bottom: 20px;
-        /* display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        align-items: center; */
     }
     .sci li img{
         height: 80px;
         width: 80px;
     }
-
-
-
-  
-    /* .banner .contentBanner div p{
-        left: 0px;
-    } */
-/*     
-    .contentBanner div p {
-        right: 50%;
-    } */
-   
     .content .textBx {
         text-align: left;
 
     }
     
-   
-
-    
-
-
     .about .content{
         display: flex;
         justify-content: center;
@@ -746,10 +698,9 @@ ul li:hover:before{
         min-width: 100%;
         width: 100%;
     }
+    /* ssssssssssssss */
     .about .content .imgBx{
-        margin: auto;
-        min-width: 100%;
-        width: 100%;
+        display: none;
     }
     /* .content .imgBx {
         display: none; 
