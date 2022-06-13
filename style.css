@@ -329,7 +329,7 @@ ul li a:hover{
 /*/
 ul li:hover:before{
     right: calc(100% + 100px);
-    transition: 1.7s;
+    transition: 1s;
     transition-delay: 0.2 ;
     
 
@@ -434,7 +434,7 @@ ul li:hover:before{
 }
 
 .about .content .textBx p{
- color: #fff;
+ color: rgb(255, 255, 255);
 }
 
 .about .content .imgBx{
@@ -458,28 +458,75 @@ ul li:hover:before{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    background-size: 100% 100%;
     
 }
+.project {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 20px;
+    background-image: url(img/test17.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+
+    
+}
+
+#more {display: none;}
+
 .Experience .content .ExperienceBx{
 
     padding: 40px 20px;
-    max-width: 340px;
+    width: 400px;
+    height:auto;
+    min-height: 650px;
     margin: 20px;
     transition: 0.5;
     text-align: center;
-    background: #ffffffc7;
+    background: #ead7d7c8;
     margin: 10px;
-    border: 1px solid#ccc;
+    border: 5px  double  rgb(85, 26, 26);
+    border-radius: 30px;
     
-    box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);
+    box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);      
+}
+.project .content .ExperienceBx{
+
+    padding: 40px 20px;
+    width: 400px;
     
+    height: 650px;
+
+    margin: 20px;
+    transition: 0.5;
+    text-align: center;
+    background: #030109f1;
+    margin: 10px;
+    border: 5px double  rgb(9, 11, 11);
+    border-radius: 30px;
     
+    /* box-shadow: -3px -3px 6px 0px rgba(58, 58, 76, 0.736);    */
+    box-shadow: 2px 2px 6px 0px rgba(170, 70, 20, 10);  
 }
 .Experience .content .ExperienceBx:hover{
     background: #180202ea;
 }
+.project .content .ExperienceBx:hover{
+    background: #ead7d7ea;
+}
 
 .Experience .content .ExperienceBx img{
+    max-width: 80px;
+    transition: 1.5s;
+}
+.project .content .ExperienceBx img{
     max-width: 80px;
     transition: 1.5s;
 }
@@ -489,25 +536,57 @@ ul li:hover:before{
 .Experience .content .ExperienceBx h2{
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.5;
+    
+}
+.project .content .ExperienceBx:hover img{
+    filter:invert(0)
+}
+.project .content .ExperienceBx img{
+    filter:invert(1)
+}
+.project .content .ExperienceBx h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
     transition: 0.5;
+    
 }
 
 .Experience .content .ExperienceBx:hover h2{
-   color: #fff;
-}
+    color: #fff;
+    
+ }
 .Experience .content .ExperienceBx p{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    transition: 0.5;
-}
+     margin-top: 20px;
+     margin-bottom: 10px;
+     font-size: 20px;
+     font-weight: 400;
+     transition: 0.5;
+ }
+.project .content .ExperienceBx:hover h2{
+    filter:invert(1)
+ }
+.project .content .ExperienceBx p{
+     margin-top: 20px;
+     margin-bottom: 10px;
+     font-size: 20px;
+     font-weight: 400;
+     transition: 0.5;
+     color: #eed6d6;
+ }
 
-.Experience .content .ExperienceBx:hover p{
-   color: #fff;
-}
+ .Experience .content .ExperienceBx:hover p{
+    color: #fff;
+ }
+
+ .project .content .ExperienceBx:hover p{
+    color: rgb(0, 0, 0);
+ }
 
 .contact{
     /* background: #130007; */

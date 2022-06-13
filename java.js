@@ -24,26 +24,23 @@ container.addEventListener("click", () => {
 })
 
  
-function myFunction(x) {
+function burgermenu(x) {
    x.classList.toggle("change");
    sidebar.classList.toggle('active');
- }
-
-
-
-
-
-// function myFunction(x) {
-//     x.classList.toggle("change");
-    
-//     sidebar.classList.toggle('active');
-//   }
-
-  
-
-
-
-//   function DARK() {
-//      var element = document.body;
-//      element.classList.toggle("dark-mode");
-//   } 
+}
+// readmoreless button js
+function readmoreless() {
+   var dots = document.getElementById("dots");
+   var moreText = document.getElementById("more");
+   var btnText = document.getElementById("morelessBut");
+ 
+   if (dots.style.display === "none") {
+     dots.style.display = "inline";
+     btnText.innerHTML = "Read more"; 
+     moreText.style.display = "none";
+   } else {
+     dots.style.display = "none";
+     btnText.innerHTML = "Read less"; 
+     moreText.style.display = "inline";
+   }
+}
