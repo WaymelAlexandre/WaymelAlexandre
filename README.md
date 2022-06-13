@@ -1,8 +1,6 @@
 Nedd to fix issus:
 
-    --	burgertmenu
-
-    --	Read more function to fix
+    --	burgert menu
 
     --	Check the phone vue
 

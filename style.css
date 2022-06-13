@@ -18,7 +18,7 @@
     right: 30px;
     width: 50px;
     height: 50px;
-  }
+}
 .bar{
     width: 50px;
     height: 5px;
@@ -482,7 +482,7 @@ p{
     flex-wrap: wrap;
     row-gap: 40px;
     column-gap: 20px;
-    background-image: url(img/test17.jpg);
+    background-image: url("img/test17.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -543,14 +543,17 @@ p{
 
 .contact{
     /* background: #130007; */
-    background-image: url(img/test1.jpg);
+    background-image: url("img/fractal11.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: auto;
     padding: 10%;
-
+    background-repeat: round;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
 }
 .contact .contactForm{
     position: relative;
@@ -642,6 +645,7 @@ p{
 
 
         width: 100%;
+        min-width: 100%;
         height:auto;
 
     }
