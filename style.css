@@ -447,14 +447,10 @@ p{
     margin-left: 15%;
 }
 
-
-
-
-
 .Experience {
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 50px;
