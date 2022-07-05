@@ -18,6 +18,7 @@
     right: 30px;
     width: 50px;
     height: 50px;
+
 }
 .bar{
     width: 50px;
@@ -452,7 +453,7 @@ p{
 
 .Experience {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -669,6 +670,16 @@ p{
     margin: 0%;
     font-size: 16px;
 }
+@media(max-width:550px){
+    .container .bar{
+        display: none;
+    }
+    .title {
+        font-size:5px !important;
+     
+    }
+
+}
 @media(max-width:400px){
     .Experience .content .ExperienceBx{
 
@@ -710,7 +721,7 @@ p{
     }
 }
 @media(max-width:991px){
-
+    
     .Experience .content .ExperienceBx{
 
 
